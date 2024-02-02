@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="mb-2">Számoljuk ki a kör kerületét, területét</h1>
+    
+    <form>
+        <label for="sugar">Sugár:</label>
+        <input class="form-control" type="number" id="sugar" [(ngModel)]="sugar" [ngModelOptions]="{standalone: true}" (input)="korTulajdonsagaiSzamol()">
+
+        <div *ngIf="kerulet && terulet">
+            <p class="mb-2 mt-5">Kerület: {{ kerulet | number:'1.2-2' }}</p>
+            <p class="mb-2">Terület: {{ terulet | number:'1.2-2' }}</p>
+        </div>
+    </form>
+</div>
