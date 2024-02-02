@@ -3,7 +3,7 @@
     
     <form>
         <label for="sugar">Sugár:</label>
-        <input class="form-control" type="number" id="sugar" [(ngModel)]="sugar" [ngModelOptions]="{standalone: true}" (input)="korTulajdonsagaiSzamol()">
+        <input class="form-control" type="number" id="sugar" [(ngModel)]="sugar" (input)="korTulajdonsagaiSzamol()">
 
         <div *ngIf="kerulet && terulet">
             <p class="mb-2 mt-5">Kerület: {{ kerulet | number:'1.2-2' }}</p>
